@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>udawon — 운영기획 PM</title>
+  <meta name="description" content="udawon의 개인 프로필 사이트. 운영기획 파트 PM으로서의 경력과 기술 스택을 소개합니다.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- 커스텀 스타일 -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ===== 1. 네비게이션 ===== -->
+  <nav class="nav" id="nav">
+    <div class="max-w-6xl mx-auto px-6 flex items-center justify-between">
+      <!-- 로고 -->
+      <a href="#hero" class="text-xl font-bold" style="background: linear-gradient(90deg, #ef4444, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-decoration: none;">
+        udawon
+      </a>
+
+      <!-- 데스크탑 메뉴 -->
+      <div class="nav-desktop flex items-center gap-6 ml-auto">
+        <a href="#about" class="nav-link" data-section="about">About</a>
+        <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+        <a href="#portfolio" class="nav-link" data-section="portfolio">Portfolio</a>
+        <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+      </div>
+
+      <!-- 햄버거 버튼 (모바일) -->
+      <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- 모바일 메뉴 -->
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="flex flex-col items-center gap-4 py-2">
+        <a href="#about" class="nav-link mobile-nav-link" data-section="about">About</a>
+        <a href="#skills" class="nav-link mobile-nav-link" data-section="skills">Skills</a>
+        <a href="#portfolio" class="nav-link mobile-nav-link" data-section="portfolio">Portfolio</a>
+        <a href="#contact" class="nav-link mobile-nav-link" data-section="contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== 2. Hero ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-content text-center px-6">
+      <span class="hero-tag">운영기획 파트 · Project Manager</span>
+      <h1 class="hero-name mt-6 mb-4">udawon</h1>
+      <p class="text-lg mb-8 max-w-xl mx-auto" style="color: var(--text-secondary);">
+        서비스 운영과 프로젝트 관리를 통해 팀과 비즈니스의 성장을 이끌어갑니다.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="#portfolio" class="btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          포트폴리오 보기
+        </a>
+        <a href="#contact" class="btn-secondary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          연락하기
+        </a>
+      </div>
+    </div>
+    <!-- 스크롤 유도 화살표 -->
+    <div class="scroll-indicator">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===== 3. About ===== -->
+  <section class="section section-alt" id="about">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="section-title animate-on-scroll">About Me</h2>
+        <p class="section-subtitle mx-auto animate-on-scroll delay-1">경험과 전문성을 소개합니다.</p>
+      </div>
+
+      <div class="about-grid">
+        <!-- 좌측: 경력 소개 텍스트 -->
+        <div class="animate-on-scroll delay-1">
+          <p class="text-lg mb-4" style="color: var(--text-secondary); line-height: 1.8;">
+            안녕하세요, 운영기획 PM <strong style="color: var(--text-primary);">udawon</strong>입니다.
+          </p>
+          <p class="mb-4" style="color: var(--text-secondary); line-height: 1.8;">
+            서비스 운영 전반의 프로세스를 설계하고 개선하는 일을 합니다.
+            복잡한 비즈니스 요구사항을 구조화하고, 팀 간 협업을 조율하여 프로젝트를 성공적으로 이끌어냅니다.
+          </p>
+          <p style="color: var(--text-secondary); line-height: 1.8;">
+            최근에는 웹 개발 역량을 키우며 기술적 이해를 바탕으로 더 효과적인 커뮤니케이션과 의사결정을 추구하고 있습니다.
+            데이터 기반의 운영 최적화와 자동화에 관심이 많습니다.
+          </p>
+        </div>
+
+        <!-- 우측: 요약 카드 -->
+        <div class="card animate-on-scroll delay-2" style="padding: 0; overflow: hidden;">
+          <div class="about-stat">
+            <div class="about-stat-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <div>
+              <div class="text-sm" style="color: var(--text-muted);">역할</div>
+              <div class="font-semibold">운영기획 PM</div>
+            </div>
+          </div>
+          <div class="about-stat">
+            <div class="about-stat-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            </div>
+            <div>
+              <div class="text-sm" style="color: var(--text-muted);">경력</div>
+              <div class="font-semibold">서비스 운영 / 프로젝트 관리</div>
+            </div>
+          </div>
+          <div class="about-stat">
+            <div class="about-stat-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <div>
+              <div class="text-sm" style="color: var(--text-muted);">업종</div>
+              <div class="font-semibold">IT / 서비스 플랫폼</div>
+            </div>
+          </div>
+          <div class="about-stat">
+            <div class="about-stat-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <div>
+              <div class="text-sm" style="color: var(--text-muted);">전문 분야</div>
+              <div class="font-semibold">운영 프로세스 설계 / 팀 관리</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 4. Skills ===== -->
+  <section class="section" id="skills">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="section-title animate-on-scroll">Skills</h2>
+        <p class="section-subtitle mx-auto animate-on-scroll delay-1">기술 역량과 PM 스킬을 소개합니다.</p>
+      </div>
+
+      <div class="grid gap-12 grid-cols-1 md:grid-cols-2">
+        <!-- 기술 스킬 -->
+        <div class="animate-on-scroll delay-1">
+          <h3 class="text-lg font-semibold mb-6" style="color: var(--text-primary);">기술 스킬</h3>
+          <div class="flex flex-col gap-5">
+            <!-- HTML -->
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="text-sm font-medium" style="color: var(--text-primary);">HTML</span>
+                <span class="text-sm" style="color: var(--text-muted);">85%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" style="--fill-width: 85%;" data-width="85"></div>
+              </div>
+            </div>
+            <!-- CSS -->
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="text-sm font-medium" style="color: var(--text-primary);">CSS</span>
+                <span class="text-sm" style="color: var(--text-muted);">80%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" style="--fill-width: 80%;" data-width="80"></div>
+              </div>
+            </div>
+            <!-- JavaScript -->
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="text-sm font-medium" style="color: var(--text-primary);">JavaScript</span>
+                <span class="text-sm" style="color: var(--text-muted);">70%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" style="--fill-width: 70%;" data-width="70"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PM 스킬 -->
+        <div class="animate-on-scroll delay-2">
+          <h3 class="text-lg font-semibold mb-6" style="color: var(--text-primary);">PM 스킬</h3>
+          <div class="grid grid-cols-2 gap-3">
+            <div class="pm-skill-card">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+              <span>프로젝트 관리</span>
+            </div>
+            <div class="pm-skill-card">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+              <span>운영 기획</span>
+            </div>
+            <div class="pm-skill-card">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              <span>팀 리더십</span>
+            </div>
+            <div class="pm-skill-card">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <span>요구사항 분석</span>
+            </div>
+            <div class="pm-skill-card">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              <span>프로세스 설계</span>
+            </div>
+            <div class="pm-skill-card">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+              <span>데이터 분석</span>
+            </div>
+            <div class="pm-skill-card">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              <span>이해관계자 관리</span>
+            </div>
+            <div class="pm-skill-card">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+              <span>애자일 / 스크럼</span>
+            </div>
+            <div class="pm-skill-card">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              <span>문서화</span>
+            </div>
+            <div class="pm-skill-card">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>일정 관리</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 5. Portfolio ===== -->
+  <section class="section section-alt" id="portfolio">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="section-title animate-on-scroll">Portfolio</h2>
+        <p class="section-subtitle mx-auto animate-on-scroll delay-1">주요 프로젝트와 성과를 소개합니다.</p>
+      </div>
+
+      <div class="portfolio-grid">
+        <!-- 카드 1: 버킷리스트 웹앱 -->
+        <div class="portfolio-card animate-on-scroll delay-1">
+          <div class="portfolio-banner" style="background: linear-gradient(135deg, #6366f1, #8b5cf6);">
+            <span class="portfolio-banner-icon" style="color: rgba(255,255,255,0.9);">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            </span>
+          </div>
+          <div class="p-6">
+            <span class="category-tag mb-3" style="background: rgba(99,102,241,0.1); color: #6366f1;">개발</span>
+            <h3 class="text-lg font-semibold mt-2 mb-2" style="color: var(--text-primary);">버킷리스트 웹앱</h3>
+            <p class="text-sm mb-4" style="color: var(--text-secondary); line-height: 1.7;">
+              인생 목표를 추적하고 관리하는 웹 애플리케이션. 순수 바닐라 JS로 빌드 도구 없이 구현하여 프론트엔드 기본기를 다졌습니다.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">Tailwind CSS</span>
+              <span class="tech-tag">LocalStorage</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 카드 2: 운영 프로세스 개선 -->
+        <div class="portfolio-card animate-on-scroll delay-2">
+          <div class="portfolio-banner" style="background: linear-gradient(135deg, #0ea5e9, #06b6d4);">
+            <span class="portfolio-banner-icon" style="color: rgba(255,255,255,0.9);">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </span>
+          </div>
+          <div class="p-6">
+            <span class="category-tag mb-3" style="background: rgba(14,165,233,0.1); color: #0ea5e9;">운영</span>
+            <h3 class="text-lg font-semibold mt-2 mb-2" style="color: var(--text-primary);">운영 프로세스 개선</h3>
+            <p class="text-sm mb-4" style="color: var(--text-secondary); line-height: 1.7;">
+              반복적인 운영 업무를 분석하고 프로세스를 재설계하여 팀 효율성을 향상시킨 프로젝트. 워크플로우 자동화와 표준화를 추진했습니다.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-tag">프로세스 설계</span>
+              <span class="tech-tag">업무 자동화</span>
+              <span class="tech-tag">데이터 분석</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 카드 3: 팀 온보딩 가이드 -->
+        <div class="portfolio-card animate-on-scroll delay-3">
+          <div class="portfolio-banner" style="background: linear-gradient(135deg, #f59e0b, #f97316);">
+            <span class="portfolio-banner-icon" style="color: rgba(255,255,255,0.9);">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </span>
+          </div>
+          <div class="p-6">
+            <span class="category-tag mb-3" style="background: rgba(245,158,11,0.1); color: #f59e0b;">기획</span>
+            <h3 class="text-lg font-semibold mt-2 mb-2" style="color: var(--text-primary);">팀 온보딩 가이드</h3>
+            <p class="text-sm mb-4" style="color: var(--text-secondary); line-height: 1.7;">
+              신규 입사자의 빠른 적응을 돕기 위한 온보딩 프로세스와 가이드 문서를 체계적으로 설계하고 구축했습니다.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-tag">문서화</span>
+              <span class="tech-tag">프로세스 설계</span>
+              <span class="tech-tag">팀 관리</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 6. Contact ===== -->
+  <section class="section" id="contact">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="section-title animate-on-scroll">Contact</h2>
+      <p class="section-subtitle mx-auto mb-10 animate-on-scroll delay-1">
+        함께 이야기 나누고 싶으시다면 언제든 연락해 주세요.
+      </p>
+
+      <div class="contact-grid animate-on-scroll delay-2">
+        <a href="mailto:udawon@example.com" class="contact-card">
+          <div class="contact-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div class="text-left">
+            <div class="text-sm" style="color: var(--text-muted);">이메일</div>
+            <div class="font-medium text-sm" style="color: var(--text-primary);">udawon@example.com</div>
+          </div>
+        </a>
+        <a href="https://github.com/udawon" target="_blank" rel="noopener noreferrer" class="contact-card">
+          <div class="contact-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </div>
+          <div class="text-left">
+            <div class="text-sm" style="color: var(--text-muted);">GitHub</div>
+            <div class="font-medium text-sm" style="color: var(--text-primary);">github.com/udawon</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 7. Footer ===== -->
+  <footer class="footer">
+    <p>&copy; 2026 udawon. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/app.js"></script>
+</body>
+</html>
